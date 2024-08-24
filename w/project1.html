@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://plus.unsplash.com/premium_photo-1661900503280-36c1b4be3a66?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .navbar-custom {
+            background-color: rgba(34, 139, 34, 0.9);
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #f0fff0;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #dfefff;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        .btn-custom {
+            background-color: #2e8b57;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #228b22;
+            transform: scale(1.05);
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+        #about {
+            margin-top: 150px;
+            margin-bottom: 200px;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        html {
+            scroll-behavior:smooth; /* For smooth scrolling */
+        }
+
+        .modal-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+        .profile-form {
+            width: 50%; /* Set the form width to 50% */
+            margin: 0 auto; /* Center the form horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PlantGuard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a> <!-- Link to login page -->
+                    </li>
+                    <!-- Add Profile Link in Navbar -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a> <!-- Link to Profile Section -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="home" class="hero-section">
+        <div>
+            <h1>Protect Your Plants with PlantGuard</h1>
+            <p>Detect and manage plant diseases with advanced AI tools and resources</p>
+            <a href="#features" class="btn btn-custom">Explore Features</a>
+        </div>
+    </div>
+    
+    <div class="emptyclass" id="features"></div> 
+    
+    <!-- ye vala class empty class hai only for y margin -->
+    <!-- Features Section -->
+    <div  class="container" >
+        <br>
+        <br>
+        <h2 class="text-center mb-4">Key Features</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://plus.unsplash.com/premium_photo-1687880582685-b33bbca934b2?q=80&w=1940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Disease Detection">
+                    <div class="card-body">
+                        <h5 class="card-title">Disease Detection</h5>
+                        <p class="card-text">Identify plant diseases using our AI-powered image recognition system.</p>
+                        <a href="diseased.html" class="btn btn-custom" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://plus.unsplash.com/premium_photo-1667516754872-5cb444204fca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Treatment Advice">
+                    <div class="card-body">
+                        <h5 class="card-title">Treatment Advice</h5>
+                        <p class="card-text">Get personalized treatment recommendations for your plants.</p>
+                        <a href="treatment.html" class="btn btn-custom">Learn More</a> <!-- Link to the Treatment Advice page -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1581578021450-fbd19fba0e63?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Disease Prevention">
+                    <div class="card-body">
+                        <h5 class="card-title">Disease Prevention</h5>
+                        <p class="card-text">Learn how to prevent diseases and maintain healthy plants.</p>
+                        <a href="prevention.html" class="btn btn-custom">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+    <!-- About Section -->
+    <div class="emptyclass" id="features"></div>
+    <div id="about" class="container">
+        <h2 class="text-center mb-4">About Us</h2>
+        <p>Welcome to PlantGuard, a pioneering company dedicated to safeguarding plant health through cutting-edge technology. Our mission is to provide accurate and reliable plant disease detection services using advanced artificial intelligence and machine learning algorithms.</p>
+        <p>At PlantGuard, we understand the critical role that plants play in our ecosystem and our daily lives. Our team of experts is committed to developing innovative solutions that help gardeners, farmers, and plant enthusiasts identify and manage plant diseases effectively.</p>
+        <p>Our services include:</p>
+        <ul>
+            <li><strong>Disease Detection:</strong> Utilize AI-powered image recognition to identify diseases in plants from uploaded images or real-time camera feeds.</li>
+            <li><strong>Treatment Advice:</strong> Receive personalized recommendations for treating identified diseases based on the latest research and best practices.</li>
+            <li><strong>Disease Prevention:</strong> Access valuable tips and resources to prevent diseases and promote overall plant health.</li>
+        </ul>
+        <p>Join us in our mission to protect plants and ensure a healthier future for our planet.</p>
+    </div>
+
+    <!-- Disease Detection Modal -->
+    <div class="modal fade" id="diseaseDetectionModal" tabindex="-1" aria-labelledby="diseaseDetectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="diseaseDetectionModalLabel">Disease Detection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Our AI-powered image recognition system allows you to quickly and accurately identify diseases affecting your plants. Simply upload an image of the affected plant, and our system will analyze the image and provide you with detailed information about the disease and recommended treatments.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to handle profile form submission -->
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('profileUsername').value;
+            const email = document.getElementById('profileEmail').value;
+            const password = document.getElementById('profilePassword').value;
+
+            // Handle form submission logic here, like sending data to a server
+
+            alert('Profile updated successfully!');
+        });
+    </script>
+</body>
+</html>
